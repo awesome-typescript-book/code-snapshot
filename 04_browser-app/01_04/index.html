@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css" />
+  <title>カンバンボード</title>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="title">カンバンボード</h1>
+
+  <form id="createForm" class="new">
+    <div class="new-head">
+      <h2 class="new-title">タスクを新規作成</h2>
+      <button class="new-button">作成</button>
+    </div>
+
+    <label class="new-label" for="title">タイトル</label>
+    <input id="title" class="new-input" name="title" />
+  </form>
+
+  <div class="lane">
+    <div class="lane-item">
+      <div class="lane-item-inner">
+        <div class="lane-status">
+          <p class="lane-status-name">TODO</p>
+        </div>
+
+        <div id="todoList" class="tasks"></div>
+      </div>
+    </div>
+
+    <div class="lane-item">
+      <div class="lane-item-inner">
+        <div class="lane-status">
+          <p class="lane-status-name">DOING</p>
+        </div>
+
+        <div id="doingList" class="tasks"></div>
+      </div>
+    </div>
+
+    <div class="lane-item">
+      <div class="lane-item-inner">
+        <div class="lane-status">
+          <p class="lane-status-name">DONE</p>
+          <button id="deleteAllDoneTask" class="lane-status-delete">DONE のタスクを一括削除</button>
+        </div>
+
+        <div id="doneList" class="tasks"></div>
+      </div>
+  </div>
+</div>
+
+<script src="/dist/index.js"></script>
+</body>
+</html>
